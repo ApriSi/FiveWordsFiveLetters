@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FiveWordsFiveLetters.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#212121" WindowStyle="None" ResizeMode="CanResizeWithGrip" AllowsTransparency="True">
+        Title="MainWindow" Height="335" Width="450" Background="#212121" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -37,6 +37,75 @@
         </Grid>
 
         <Grid Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="1">
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="12"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1">
+                    <TextBlock x:Name="ProgressDisplay" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" Margin="0,10,0,0">0/100</TextBlock>
+                    <ProgressBar x:Name="ProgressBar" Foreground="#f38064" Background="#2F2F31"  Value="25" Height="15" Width="215" Margin="15" BorderThickness="0" VerticalAlignment="Bottom"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Button Click="StartButton_Click" Margin="0,0,100,0" Height="35" Width="35" Background="#f38064" Foreground="White" BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="100"/>
+                            </Style>
+                        </Button.Resources>
+                        <Image Height="18" Margin="5.5,3,3,3" Source="play-solid.png"/>
+                    </Button>
+
+                    <Button Height="35" Width="35" Background="#352e32" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="100"/>
+                            </Style>
+                        </Button.Resources>
+                        <Image Opacity="0.6" Margin="7"  Source="floppy-disk-regular.png"/>
+                    </Button>
+
+                    <Button Click="SelectFileButton_Click" Margin="0,0,-100,0" Height="35" Width="35" Background="#383235" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="100"/>
+                            </Style>
+                        </Button.Resources>
+                        <Image Opacity="0.6" Margin="7"  Source="file-import-solid.png"/>
+                    </Button>
+                </Grid>
+
+                <TextBlock x:Name="CurrentFileLabel" Visibility="Hidden" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="8" FontWeight="Bold" Padding="0">Current File: e.txt</TextBlock>
+
+                <TextBox x:Name="WordDisplayLog" Background="Transparent" Foreground="White" Grid.Row="4">
+                    test
+                </TextBox>
+            </Grid>
+
+            <Grid Visibility="Hidden" x:Name="PopupDialog" Width="250" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Border CornerRadius="8" BorderThickness="0" Background="#000000" Opacity="0.2"/>
+                <TextBlock x:Name="PopupDialogTitle" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF991F">WARNING!</TextBlock>
+                <TextBlock x:Name="PopupDialogMessage"  Foreground="White" Width="185" Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">Message</TextBlock>
+                <Button x:Name="PopupDialogButtonClose" Click="PopupDialogButtonClose_Click" VerticalAlignment="Bottom" Width="150" Margin="3" BorderThickness="0" Foreground="Black" Background="#57D9A3">Ok</Button>
+            </Grid>
+        </Grid>
+
+        <!--<Grid Grid.Row="1">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -79,18 +148,11 @@
                                     </Style>
                                 </ProgressBar.Resources>
                             </ProgressBar>
-                            <TextBlock x:Name="ProgressDisplay" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold">50/100</TextBlock>
+                            <TextBlock x:Name="ProgressDisplay" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold">?/?</TextBlock>
                         </Grid>
                     </StackPanel>
                 </Grid>
             </Grid>
-
-            <Grid Visibility="Hidden" x:Name="PopupDialog" Width="250" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Border CornerRadius="8" BorderThickness="0" Background="#000000" Opacity="0.2"/>
-                <TextBlock x:Name="PopupDialogTitle" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF991F">WARNING!</TextBlock>
-                <TextBlock x:Name="PopupDialogMessage"  Foreground="White" Width="185" Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">Message</TextBlock>
-                <Button x:Name="PopupDialogButtonClose" Click="PopupDialogButtonClose_Click" VerticalAlignment="Bottom" Width="150" Margin="3" BorderThickness="0" Foreground="Black" Background="#57D9A3">Ok</Button>
-            </Grid>
-        </Grid>
+        </Grid>-->
     </Grid>
 </Window>

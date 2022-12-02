@@ -88,11 +88,10 @@
 
                 var thready = new Thread(() => {
                     for (int x = startCount; x < endCount; x++) {
-                        FindWords(binaryWords, wordDictionary, new List<uint>() { binaryWords[x] }, x, binaryWords[x]);
                         GetUpdateProgressEvent!.Invoke(1, binaryWords.Count());
+                        FindWords(binaryWords, wordDictionary, new List<uint>() { binaryWords[x] }, x, binaryWords[x]);
                     }
                 });
-
                 thready.Start();
             }
 
@@ -105,7 +104,6 @@
             {
                 foreach (uint word in currentBinary)
                 {
-                    //Console.Write(wordDictionary[word] + ", ");
                     AllCombinations += $"{wordDictionary[word]}, ";
                 }
 

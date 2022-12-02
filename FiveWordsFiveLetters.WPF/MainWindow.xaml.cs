@@ -40,6 +40,7 @@ namespace FiveWordsFiveLetters.WPF
             var hasSelectedFile = openDialog.ShowDialog() == true;
             if (hasSelectedFile) {
                 CurrentFileLabel.Text = "Current File: " + openDialog.SafeFileName;
+                CurrentFileLabel.Visibility = Visibility.Visible;
                 Words.Path = openDialog.FileName;
             }
         }
@@ -59,7 +60,7 @@ namespace FiveWordsFiveLetters.WPF
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             try {
-                currentProgress = 0;
+                currentProgress = 1;
                 Words.AllCombinations = string.Empty;
                 WordDisplayLog.Text = string.Empty;
                 Words.CombineWords();
@@ -75,7 +76,7 @@ namespace FiveWordsFiveLetters.WPF
             PopupDialog.Visibility = Visibility.Hidden;
         }
 
-        private int currentProgress = 0;
+        private int currentProgress = 1;
         private void UpdateProgress(int progress, int length) {
             currentProgress += progress;
             Dispatcher.Invoke(() => {
