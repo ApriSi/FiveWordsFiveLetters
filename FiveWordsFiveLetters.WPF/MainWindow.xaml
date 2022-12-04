@@ -68,7 +68,7 @@
                                 <Setter Property="CornerRadius" Value="100"/>
                             </Style>
                         </Button.Resources>
-                        <Image Height="18" Margin="5.5,3,3,3" Source="play-solid.png"/>
+                        <Image Height="18" Margin="5.5,3,3,3" Source="/play-solid.png"/>
                     </Button>
 
                     <Button Height="35" Width="35" Background="#352e32" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
@@ -77,7 +77,7 @@
                                 <Setter Property="CornerRadius" Value="100"/>
                             </Style>
                         </Button.Resources>
-                        <Image Opacity="0.6" Margin="7"  Source="floppy-disk-regular.png"/>
+                        <Image Opacity="0.6" Margin="7"  Source="/floppy-disk-regular.png"/>
                     </Button>
 
                     <Button Click="SelectFileButton_Click" Margin="0,0,-100,0" Height="35" Width="35" Background="#383235" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
@@ -86,7 +86,7 @@
                                 <Setter Property="CornerRadius" Value="100"/>
                             </Style>
                         </Button.Resources>
-                        <Image Opacity="0.6" Margin="7"  Source="file-import-solid.png"/>
+                        <Image Opacity="0.6" Margin="7"  Source="/file-import-solid.png"/>
                     </Button>
                 </Grid>
 

@@ -8,11 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="file-import-solid.png" />
+    <None Remove="floppy-disk-regular.png" />
+    <None Remove="play-solid.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FiveWordsFiveLetters.BL\FiveWordsFiveLetters.BL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Resource Include="file-import-solid.png" />
+    <Resource Include="floppy-disk-regular.png" />
+    <Resource Include="play-solid.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\file-import-solid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\floppy-disk-regular.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\play-solid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
