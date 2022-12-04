@@ -68,7 +68,7 @@ namespace FiveWordsFiveLetters.WPF
             } catch {
                 PopupDialog.Visibility = Visibility.Visible;
                 PopupDialogTitle.Text = "WARNING!";
-                PopupDialogMessage.Text = "Remember to select a file!";
+                PopupDialogMessage.Text = "Please Select a file! ";
             }
         }
 

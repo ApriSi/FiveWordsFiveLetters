@@ -69,7 +69,7 @@
                                 <Setter Property="CornerRadius" Value="100"/>
                             </Style>
                         </Button.Resources>
-                        <Image Opacity="0.9" Height="18" Margin="5.5,3,3,3" Source="/play-solid.png"/>
+                        <Image Opacity="0.9" Height="18" Margin="5.5,3,3,3" Source="Assets/play-solid.png"/>
                     </Button>
 
                     <Button x:Name="SaveFileButton" Click="SaveFileButton_Click" Height="35" Width="35" Background="#292929" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
@@ -78,7 +78,7 @@
                                 <Setter Property="CornerRadius" Value="100"/>
                             </Style>
                         </Button.Resources>
-                        <Image Opacity="0.6" Margin="7"  Source="/floppy-disk-regular.png"/>
+                        <Image Opacity="0.6" Margin="7"  Source="Assets/floppy-disk-regular.png"/>
                     </Button>
 
                     <Button Click="SelectFileButton_Click" Margin="0,0,-100,0" Height="35" Width="35" Background="#292929" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
@@ -87,7 +87,7 @@
                                 <Setter Property="CornerRadius" Value="100"/>
                             </Style>
                         </Button.Resources>
-                        <Image Opacity="0.6" Margin="7"  Source="/file-import-solid.png"/>
+                        <Image Opacity="0.6" Margin="7"  Source="Assets/file-import-solid.png"/>
                     </Button>
                 </Grid>
 
@@ -97,11 +97,11 @@
 
             </Grid>
 
-            <Grid Visibility="Hidden" x:Name="PopupDialog" Width="250" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Border CornerRadius="8" BorderThickness="0" Background="#000000" Opacity="0.2"/>
-                <TextBlock x:Name="PopupDialogTitle" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF991F">WARNING!</TextBlock>
-                <TextBlock x:Name="PopupDialogMessage"  Foreground="White" Width="185" Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">Message</TextBlock>
-                <Button x:Name="PopupDialogButtonClose" Click="PopupDialogButtonClose_Click" VerticalAlignment="Bottom" Width="150" Margin="3" BorderThickness="0" Foreground="Black" Background="#57D9A3">Ok</Button>
+            <Grid Visibility="Hidden" x:Name="PopupDialog" Width="250" Height="100" Margin="25,-30,25,25" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Border CornerRadius="8" BorderThickness="0" Background="#292929" Opacity="1"/>
+                <TextBlock x:Name="PopupDialogTitle" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="red">WARNING!</TextBlock>
+                <TextBlock x:Name="PopupDialogMessage"  Foreground="White" Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">Message</TextBlock>
+                <Button x:Name="PopupDialogButtonClose" Click="PopupDialogButtonClose_Click" VerticalAlignment="Bottom" Width="150" Margin="15" BorderThickness="0" Foreground="Black" Background="#7F22FD">Ok</Button>
             </Grid>
         </Grid>
 
