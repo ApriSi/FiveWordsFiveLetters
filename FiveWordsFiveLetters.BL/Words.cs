@@ -77,7 +77,8 @@
 
         public static void BinaryLoop(uint[] binaryWords, Dictionary<uint, string> wordDictionary) {
             int splitCount = 4;
-
+            GetUpdateProgressEvent!.Invoke(1, binaryWords.Count());
+            
             for (int i = 0; i < splitCount; i++) {
                 int startCount = (binaryWords.Count() / splitCount) * i;
                 int endCount = (binaryWords.Count() / splitCount) * (i + 1);
@@ -87,8 +88,7 @@
                 }
 
                 var thready = new Thread(() => {
-                    for (int x = startCount; x < endCount; x++) {
-                        GetUpdateProgressEvent!.Invoke(1, binaryWords.Count());
+                    for (int x = startCount; x < endCount; x++) {             
                         FindWords(binaryWords, wordDictionary, new List<uint>() { binaryWords[x] }, x, binaryWords[x]);
                     }
                 });
