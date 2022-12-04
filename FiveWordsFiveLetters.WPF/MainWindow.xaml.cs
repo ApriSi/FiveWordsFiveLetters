@@ -102,7 +102,18 @@ namespace FiveWordsFiveLetters.WPF
 
         private void SaveFileButton_Click(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(Environment.CurrentDirectory + "/output.txt", Words.AllCombinations);
+            SaveFileDialog save = new SaveFileDialog();
+            save.FileName = "Output.txt";
+            save.Filter = "Text File | *.txt";
+
+            if (save.ShowDialog() == true)
+            {
+                StreamWriter writer = new StreamWriter(save.OpenFile());
+                writer.Write(Words.AllCombinations);
+                writer.Dispose();
+                writer.Close();
+            }
+
         }
     }
 }

@@ -59,20 +59,20 @@
 
                 <Grid Grid.Row="1">
                     <TextBlock x:Name="ProgressDisplay" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" Margin="0,-20,0,0">0/100</TextBlock>
-                    <ProgressBar x:Name="ProgressBar" Foreground="#f38064" Background="#2F2F31"  Value="0" Height="15" Width="215" Margin="15" BorderThickness="0" VerticalAlignment="Bottom"/>
+                    <ProgressBar x:Name="ProgressBar" Foreground="#7F22FD" Background="#2F2F31"  Value="0" Height="15" Width="215" Margin="15" BorderThickness="0" VerticalAlignment="Bottom"/>
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    <Button Click="StartButton_Click" Margin="0,0,100,0" Height="35" Width="35" Background="#f38064" Foreground="White" BorderThickness="0">
+                    <Button Click="StartButton_Click" Margin="0,0,100,0" Height="35" Width="35" Background="#7F22FD" Foreground="White" BorderThickness="0">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="100"/>
                             </Style>
                         </Button.Resources>
-                        <Image Height="18" Margin="5.5,3,3,3" Source="/play-solid.png"/>
+                        <Image Opacity="0.9" Height="18" Margin="5.5,3,3,3" Source="/play-solid.png"/>
                     </Button>
 
-                    <Button x:Name="SaveFileButton" Click="SaveFileButton_Click" Height="35" Width="35" Background="#352e32" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
+                    <Button x:Name="SaveFileButton" Click="SaveFileButton_Click" Height="35" Width="35" Background="#292929" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="100"/>
@@ -81,7 +81,7 @@
                         <Image Opacity="0.6" Margin="7"  Source="/floppy-disk-regular.png"/>
                     </Button>
 
-                    <Button Click="SelectFileButton_Click" Margin="0,0,-100,0" Height="35" Width="35" Background="#383235" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
+                    <Button Click="SelectFileButton_Click" Margin="0,0,-100,0" Height="35" Width="35" Background="#292929" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="100"/>
@@ -93,7 +93,7 @@
 
                 <TextBlock x:Name="CurrentFileLabel" Visibility="Hidden" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="10" FontWeight="Bold" Padding="0">Current File: e.txt</TextBlock>
                 <TextBlock Foreground="White" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="0">Output</TextBlock>
-                <TextBox x:Name="WordDisplayLog" Margin="5,10,5,10" TextAlignment="Center" Background="Transparent" Foreground="White" Grid.Row="5" BorderBrush="#FF4E4E4E"/>
+                <TextBox x:Name="WordDisplayLog" Margin="5,10,5,10" TextAlignment="Center" Background="Transparent" Foreground="White" Grid.Row="5" BorderBrush="#FF3E3E3E"/>
 
             </Grid>
 

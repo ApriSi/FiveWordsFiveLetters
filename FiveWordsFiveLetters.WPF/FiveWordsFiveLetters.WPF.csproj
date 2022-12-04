@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\file-import-solid.png" />
     <None Remove="file-import-solid.png" />
     <None Remove="floppy-disk-regular.png" />
     <None Remove="play-solid.png" />
@@ -18,15 +19,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\file-import-solid.png" />
     <Resource Include="file-import-solid.png" />
     <Resource Include="floppy-disk-regular.png" />
     <Resource Include="play-solid.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Assets\file-import-solid.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Assets\floppy-disk-regular.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
