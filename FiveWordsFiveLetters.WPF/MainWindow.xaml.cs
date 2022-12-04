@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FiveWordsFiveLetters.BL;
+using System.IO;
 
 namespace FiveWordsFiveLetters.WPF
 {
@@ -98,5 +99,10 @@ namespace FiveWordsFiveLetters.WPF
                 WordDisplayLog.Text = Words.AllCombinations;
             });
         }
-     }
+
+        private void SaveFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText(Environment.CurrentDirectory + "/output.txt", Words.AllCombinations);
+        }
+    }
 }

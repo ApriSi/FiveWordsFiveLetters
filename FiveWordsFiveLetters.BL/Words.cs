@@ -10,7 +10,7 @@
         public static event UpdateAllCombinations? UpdateAllCombinationsEvent;
 
         public static string? Path;
-        public static string? AllCombinations;
+        public static string AllCombinations;
 
         private static string[] ReadFileToList(string path) {
             var file = File.ReadAllLines(path);
@@ -108,7 +108,6 @@
                 {
                     AllCombinations += $"{wordDictionary[word]}, ";
                 }
-
                 AllCombinations += "\n";
                 UpdateAllCombinationsEvent!.Invoke();
                 return;

@@ -71,7 +71,7 @@
                         <Image Height="18" Margin="5.5,3,3,3" Source="/play-solid.png"/>
                     </Button>
 
-                    <Button Height="35" Width="35" Background="#352e32" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
+                    <Button x:Name="SaveFileButton" Click="SaveFileButton_Click" Height="35" Width="35" Background="#352e32" Foreground="White" BorderThickness="1" BorderBrush="#3c3639">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="100"/>
