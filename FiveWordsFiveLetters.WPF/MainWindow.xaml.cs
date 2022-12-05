@@ -24,7 +24,7 @@ namespace FiveWordsFiveLetters.WPF
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        { 
             InitializeComponent();
             Words.GetUpdateProgressEvent += UpdateProgress;
             Words.FinishedEvent += FinishedProgress;
